@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/student calculator.css">
+    <link rel="icon" href="assets/images/mila_logo_vertical_jackson.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Milas Jax - Student Calculator</title>
+</head>
+<body>
+    <header>
+        <img src="assets/images/mila_logo_horizontal_jackson.png">
+    </header>
+    <main>
+        <section class="info">
+            <div class="info-content">
+                <h1>MILA JAX - Student Calculator</h1>
+
+                <div class="panel">
+                    <h2>Informations</h2>
+                    <p>Yearly Amount: $<span id="student_yearly"></span> (per F1 Student)<br><br>Monthly Amount: $<span id="student_mouthly"></span> (per F1 Student)<p>
+                    <p>Yearly Amount: $<span id="dependent_yearly"></span> (per Dependent)<br><br>Amount: $<span id="dependent_monthly"></span> (per Dependent)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="value_definer">
+            <div class="value_definer-content">
+                <div class="settings">
+                    <div class="panel">
+                        <h2>Mounths</h2>
+
+                        <div class="slider-container">
+                            <input type="hidden" id="mouths_numeric-input" min="0" max="12" value="1">
+                            <div class="slider-track">
+                                
+                                <div class="slider">
+                                    <div class="mounth_slider-line"></div>
+                                    <div class="mounth_slider-point" data-value="0"><p>0</p></div>
+                                    <div class="mounth_slider-point" data-value="1"><p>1</p></div>
+                                    <div class="mounth_slider-point" data-value="2"><p>2</p></div>
+                                    <div class="mounth_slider-point" data-value="3"><p>3</p></div>
+                                    <div class="mounth_slider-point" data-value="4"><p>4</p></div>
+                                    <div class="mounth_slider-point" data-value="5"><p>5</p></div>
+                                    <div class="mounth_slider-point" data-value="6"><p>6</p></div>
+                                    <div class="mounth_slider-point" data-value="7"><p>7</p></div>
+                                    <div class="mounth_slider-point" data-value="8"><p>8</p></div>
+                                    <div class="mounth_slider-point" data-value="9"><p>9</p></div>
+                                    <div class="mounth_slider-point" data-value="10"><p>10</p></div>
+                                    <div class="mounth_slider-point" data-value="11"><p>11</p></div>
+                                    <div class="mounth_slider-point" data-value="12"><p>12</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+        
+                    <div class="panel">
+                        <h2>Dependents</h2>
+
+                        <div class="slider-container">
+                            <input type="hidden" id="dependents_numeric-input" min="1" max="6" value="1">
+                            <div class="slider-track">
+                                <div class="slider">
+                                    <div class="dependent_slider-line"></div>
+                                    <div class="dependent_slider-point" data-value="0"><p>0</p></div>
+                                    <div class="dependent_slider-point" data-value="1"><p>1</p></div>
+                                    <div class="dependent_slider-point" data-value="2"><p>2</p></div>
+                                    <div class="dependent_slider-point" data-value="3"><p>3</p></div>
+                                    <div class="dependent_slider-point" data-value="4"><p>4</p></div>
+                                    <div class="dependent_slider-point" data-value="5"><p>5</p></div>
+                                    <div class="dependent_slider-point" data-value="6"><p>6</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="value_display">
+                <h2>Total</h2>
+                <span id="usd_display">$0.00</span>
+            </div>
+            
+        </section>
+
+        <section class="converter">
+            <div class="converter-content">
+                <h1>Global Currency Converter</h1>
+
+                <div class="converter-filds">
+                    <input list="moedasSelect" type="text" class="converter-coin" placeholder="Coin" id="converter-coin">
+                    <datalist id="moedasSelect">
+                    </datalist>
+
+                    <span class="converter-separator"></span>
+                    <input type="readonly" id="converter-value" class="converter-value" placeholder="Value">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/values.js"></script>
+    <script src="assets/js/slidebar.js"></script>
+    <script src="assets/js/usdValueChange.js"></script>
+    <script src="assets/js/converter.js"></script>
+
+</body>
+</html>

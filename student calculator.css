@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
+
+body {
+    background-color: #2A2773;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    width: 20rem;
+    flex-shrink: 0;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-content {
+    background-color: #FF5518;
+    padding: 0rem 2rem 2rem 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    width: 60vw;
+}
+
+.info-content h1 {
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.panel {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    text-align: center;
+}
+
+.value_definer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.value_definer-content {
+    background-color: #FF5518;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px 10px 0px 0px;
+    width: 60vw;
+}
+
+.slider-container {
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 2rem;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+}
+
+.mounth_slider-point, .dependent_slider-point {
+    width: 15px;
+    height: 15px;
+    background-color: #a0a0a0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.mounth_slider-point p, .dependent_slider-point p {
+    text-align: center;
+    margin-top: 1.3rem;
+}
+
+.mounth_slider-line {
+    width: 91%;
+    background-color: #a0a0a0;
+    height: 5px;
+    position: absolute;
+    left: 12px;
+}
+
+.dependent_slider-line {
+    width: 85%;
+    background-color: #a0a0a0;
+    height: 5px;
+    position: absolute;
+    left: 12px;
+}
+
+#numeric-input {
+    width: 40px;
+    text-align: center;
+}
+
+.value_display {
+    background-color: #D9D9D9;
+    width: 60vw;
+    padding: 2rem;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.value_display h2, .value_display span {
+    text-align: center;
+    font-size: x-large;
+}
+
+.value_display span {
+    font-size: xx-large;
+}
+
+.converter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.converter-content {
+    background-color: orangered;
+    width: 60vw;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.converter-content h1 {
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.converter-filds {
+    background: #D9D9D9;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.converter input {
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.converter-separator {
+    background-color: black;
+    width: 2px;
+}
+
+@media screen and (max-width: 750px) {
+    header img {
+        width: 15rem;
+    }
+
+    .info-content h1, .converter-content h1 {
+        font-size: x-large;
+    }
+
+    .mounth_slider-point, .dependent_slider-point {
+        width: 15px;
+        height: 15px;
+    }
+
+    .converter-filds {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .converter input {
+        margin: 1rem 0;
+    }
+
+    .converter-separator {
+        height: 2px;
+        width: 100%;
+    }
+
+    .mounth_slider-line {
+        width: 92%;
+    }
+
+    .converter input {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header img {
+        width: 10rem;
+    }
+
+    .value_definer-content, .converter-content, .value_display, .info-content {
+        width: 80vw;
+    }
+
+    .mounth_slider-point, .dependent_slider-point {
+        width: 10px;
+        height: 10px;
+    }
+
+    .mounth_slider-line, .dependent_slider-line {
+        height: 2px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .info-content, .value_definer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+        width: 14rem;
+    }
+
+    .mounth_slider-line {
+        width: 90%;
+        height: 2px;
+    }
+
+    .dependent_slider-line {
+        width: 80%;
+        height: 2px;
+    }
+}
